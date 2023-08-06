@@ -1,0 +1,56 @@
+{
+  "name": "Alien dada",
+  "description": "Kuch nhi",
+  "website": "https://google.com",
+  "success_url": "https://t.me/Cybersecbyte_xd",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable heroku.",
+      "value": "ANYTHING"
+    },
+    "APP_ID": {
+      "description": "Get this value from my.telegram.org! ",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org! ",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Bot token dal idhar bidu",
+      "value": ""
+    },
+    "CHROME_BIN": {
+      "description": "Leave as it is",
+      "value": "/app/.apt/usr/bin/google-chrome",
+      "required": false
+    },
+    "CHROME_DRIVER": {
+      "description": "Leave as it is",
+      "value": "/app/.chromedriver/bin/chromedriver",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.6"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-chromedriver"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
