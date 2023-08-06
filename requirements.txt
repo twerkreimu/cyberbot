@@ -2,3 +2,4 @@ pyrogram
 Tgcrypto
 aiohttp
 selenium
+webdriver-manager
